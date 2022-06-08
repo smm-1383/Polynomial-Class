@@ -9,11 +9,17 @@ class Poly:
             '+', ' +').replace('-', ' -').split()
         dic = {}
         for i in poly:
+            print(i)
             if letter not in i:
                 dic[0] = dic.get(0, 0) + int(i)
                 continue
+            if (f'*{letter}' not in i) and i[1:].startswith(letter):
+                i = '1*' + i
+            elif f'*{letter}' not in i:
+                i = i.replace(letter, '*' + letter)
             if '**' not in i:
                 i += '**1'
+            print(i)
             j = i.split('**')
             j[0] = j[0].split('*')
             dic[int(j[1])] = dic.get(int(j[1]), 0) + int(j[0][0])
