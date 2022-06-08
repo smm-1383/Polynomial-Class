@@ -1,6 +1,6 @@
 # Poly
 
-Poly class is a class for doing simple things like add, subtract, multiply, divide, mode and derivative and applying division-mod(divmod) on polynomials.
+Poly class is a class for doing simple things like add, subtract, multiply, divide, mod and derivative and applying division-mod(divmod) on polynomials.
 
 
 ## Usage
